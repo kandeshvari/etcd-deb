@@ -1,0 +1,48 @@
+# For an explanation of the various ways to do cluster setup, see:
+# /usr/share/doc/etcd/Documentation/clustering.md.gz
+
+# human-readable name for this member.
+NAME=`hostname -s`
+DOMAIN=`hostname -d`
+
+# path to the data directory.
+DATA_DIR=/var/lib/etcd/${DOMAIN}.etcd
+
+# number of committed transactions to trigger a snapshot to disk.
+# SNAPSHOT_COUNT=10000
+
+# list of URLs to listen on for peer traffic.
+# LISTEN_PEER_URLS='http://localhost:2380,http://localhost:7001'
+
+# list of URLs to listen on for client traffic.
+# LISTEN_CLIENT_URLS='http://localhost:2379,http://localhost:4001'
+
+# comma-separated whitelist of origins for CORS (cross-origin resource sharing).
+# CORS=""
+
+# list of this member's peer URLs to advertise to the rest of the cluster.
+# INITIAL_ADVERTISE_PEER_URLS='http://localhost:2380,http://localhost:7001'
+
+# initial cluster configuration for bootstrapping.
+# INITIAL_CLUSTER='default=http://localhost:2380,default=http://localhost:7001'
+
+# initial cluster state ('new' or 'existing').
+# INITIAL_CLUSTER_STATE='new'
+
+# initial cluster token for the etcd cluster during bootstrap.
+# INITIAL_CLUSTER_TOKEN='etcd-cluster'
+
+# list of this member's client URLs to advertise to the rest of the cluster.
+# ADVERTISE_CLIENT_URLS='http://localhost:2379,http://localhost:4001'
+
+# discovery URL used to bootstrap the cluster.
+# DISCOVERY=''
+
+# expected behavior ('exit' or 'proxy') when discovery services fails.
+# DISCOVERY_FALLBACK='proxy'
+
+# HTTP proxy to use for traffic to discovery service.
+# DISCOVERY_PROXY=''
+
+# DNS domain name to use for discovery
+# DISCOVERY_SRV=`hostname -d`

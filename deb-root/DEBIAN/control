@@ -1,0 +1,12 @@
+Package: etcd
+Version: 2.2.4-1
+Architecture: amd64
+Maintainer: Dmitry Kurbatov <dk@dimcha.ru>
+Depends:
+Priority: optional
+Description: Highly-available key value store for shared configuration and service discovery
+ .
+ This package provides upstart config script and etcd binaries, unmodified from the upstream
+ releases, in /usr/bin/.
+ .
+ It does install etcd as a service to be started automatically.
