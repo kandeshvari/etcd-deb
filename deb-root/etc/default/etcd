@@ -102,7 +102,7 @@ ETCD_INITIAL_ADVERTISE_PEER_URLS="http://${ETCD_NAME}:2380"
 ## The key is the value of the `-name` flag for each node provided.
 ## The default uses `default` for the key because this is the default for the `-name` flag.
 ## default: "default=http://localhost:2380,default=http://localhost:7001"
-ETCD_INITIAL_CLUSTER="etcd-1=http://etcd-1:2380,etcd-2=http://etcd-2:2380,etcd-3=http://etcd-3:2380"
+ETCD_INITIAL_CLUSTER="etcd-1=http://${NAME}:2380"
 
 ##### -initial-cluster-state
 ## Initial cluster state ("new" or "existing"). Set to `new` for all members
